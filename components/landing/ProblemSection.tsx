@@ -24,11 +24,11 @@ export const ProblemSection = () => {
             <div className="text-center mb-8 md:mb-12">
               <AlertTriangle className="h-12 w-12 md:h-16 md:w-16 text-red-500 mx-auto break-keep mb-4" />
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 md:mb-4 px-2" data-track-id="problem-section" data-section="Problem Introduction">
-                <span className="text-red-400 block mb-2">복붙만 하는 AI 시대</span>
-                <span className="text-lg sm:text-2xl md:text-3xl">우리 아이는 <span className="text-red-400">생각하는 힘</span>을 잃고 있습니다</span>
+                <span className="text-red-400 block mb-2">글로만 배우는 AI 시대</span>
+                <span className="text-lg sm:text-2xl md:text-3xl">우리 아이는 <span className="text-red-400">대화하는 법</span>을 잃고 있습니다</span>
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto break-keep px-4">
-                ChatGPT에 의존하는 아이들, 과연 이대로 괜찮을까요?
+                타이핑만 하는 아이들, 말로 생각을 표현할 수 있을까요?
               </p>
             </div>
 
@@ -38,13 +38,13 @@ export const ProblemSection = () => {
                   <div className="w-12 h-12 md:w-16 md:h-16 bg-red-900 rounded-full flex items-center justify-center mx-auto break-keep mb-3 md:mb-4">
                     <MessageSquare className="h-6 w-6 md:h-8 md:w-8 text-red-400" />
                   </div>
-                  <CardTitle className="text-white text-center text-lg md:text-xl">생각 없이 복붙하는 우리 아이</CardTitle>
+                  <CardTitle className="text-white text-center text-lg md:text-xl">말하기를 두려워하는 우리 아이</CardTitle>
                 </CardHeader>
                 <CardContent className="px-4">
                   <div className="relative bg-gray-700 rounded-2xl p-4 mb-4 shadow-inner">
                     <div className="absolute -bottom-2 left-1/2 -rotate-180 -translate-x-1/2 w-0 h-0 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-b-[12px] border-b-gray-700"></div>
                     <p className="text-gray-100 text-sm md:text-base italic">
-                      "아이가 GPT에 과제를 물어보고 그대로 제출해요. 스스로 생각하는 시간이 줄어들고 있어 걱정됩니다."
+                      "아이가 발표할 때 말을 못해요. 생각은 있는데 말로 표현하는 걸 어려워합니다."
                     </p>
                   </div>
                   <div className="flex items-center justify-center gap-2 mb-3">

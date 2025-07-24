@@ -73,7 +73,7 @@ export function CTAButton({ href, children, className, size, price = 29000, sour
       fbEvent('Lead', {
         value: 0, // 초기 관심 표시
         currency: 'KRW',
-        content_name: 'ThinkGPT 무료 상담 CTA 클릭',
+        content_name: '생각톡 무료 상담 CTA 클릭',
         content_category: 'Education',
         lead_event_source: 'CTA Button',
         button_location: buttonSource,
@@ -91,7 +91,7 @@ export function CTAButton({ href, children, className, size, price = 29000, sour
         num_items: 1,
         content_category: 'Education',
         content_type: 'product',
-        content_name: 'ThinkGPT 2주 체험',
+        content_name: '생각톡 2주 체험',
         content_ids: ['thinkgpt_trial_2weeks'],
         contents: [{
           id: 'thinkgpt_trial_2weeks',

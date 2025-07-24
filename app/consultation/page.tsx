@@ -11,6 +11,7 @@ import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { ArrowLeft, MessageSquare, CheckCircle } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import { trackEvent, identifyUser } from "@/lib/mixpanel"
 import { fbLead } from "@/lib/facebook-pixel"
 
@@ -44,7 +45,7 @@ function ConsultationModal({ isOpen, onClose }: ConsultationModalProps) {
             <ul className="text-sm text-blue-700 space-y-1">
               <li>• 1-2일 내 전화 상담 예정</li>
               <li>• 자녀 학습 현황 맞춤 상담</li>
-              <li>• ThinkGPT 활용 방법 안내</li>
+              <li>• 생각톡 활용 방법 안내</li>
             </ul>
           </div>
           <div className="flex gap-3">
@@ -151,8 +152,14 @@ function ConsultationContent() {
               돌아가기
             </Link>
             <div className="flex items-center space-x-2">
-              <MessageSquare className="h-6 w-6 text-blue-600" />
-              <span className="text-lg font-semibold">ThinkGPT 상담 신청</span>
+              <Image 
+                src="/think-talk_logo.png" 
+                alt="생각톡" 
+                width={120} 
+                height={40} 
+                className="h-10 w-auto"
+              />
+              <span className="text-lg font-semibold ml-2">상담 신청</span>
             </div>
           </div>
         </div>
@@ -237,7 +244,7 @@ function ConsultationContent() {
                   <h4 className="font-semibold text-blue-800 mb-2">상담 내용</h4>
                   <ul className="text-sm text-blue-700 space-y-1">
                     <li>• 자녀 학습 현황 분석</li>
-                    <li>• ThinkGPT 활용 방법 안내</li>
+                    <li>• 생각톡 활용 방법 안내</li>
                     <li>• 맞춤형 학습 계획 제안</li>
                     <li>• 학부모 궁금증 해결</li>
                   </ul>

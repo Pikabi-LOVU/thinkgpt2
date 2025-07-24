@@ -178,7 +178,7 @@ function TrialContent() {
       fbAddToCart(
         planPrice,
         'KRW',
-        `ThinkGPT ${value === 'yearly' ? '연간' : '월간'} 플랜`,
+        `생각톡 ${value === 'yearly' ? '연간' : '월간'} 플랜`,
         planId
       )
     }
@@ -385,7 +385,7 @@ function TrialContent() {
             value: 0, // 무료 체험이므로 0
             predicted_ltv: formData.interestedPlan === 'yearly' ? 290000 : 29000,
             currency: 'KRW',
-            content_name: 'ThinkGPT 2주 체험',
+            content_name: '생각톡 2주 체험',
             content_category: 'Education',
             content_type: 'subscription',
             content_ids: ['trial_2weeks'],
@@ -554,9 +554,15 @@ function TrialContent() {
               <ArrowLeft className="h-4 w-4 mr-2" />
               돌아가기
             </Link>
-            <div className="flex items-center space-x-2">
-              <Brain className="h-6 w-6 text-blue-600" />
-              <span className="text-lg font-semibold">{funnelFromUrl === 'consult' ? 'ThinkGPT 무료 상담' : 'ThinkGPT 체험'}</span>
+            <div className="flex items-center">
+              <Image 
+                src="/think-talk_logo.png" 
+                alt="생각톡" 
+                width={120} 
+                height={40} 
+                className="h-10 w-auto"
+              />
+              <span className="text-lg font-semibold ml-2">{funnelFromUrl === 'consult' ? '무료 상담' : '2주 체험'}</span>
             </div>
           </div>
         </div>

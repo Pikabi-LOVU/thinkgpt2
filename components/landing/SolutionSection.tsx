@@ -26,9 +26,9 @@ export const SolutionSection = () => {
 
                 {/* 메인 타이틀 */}
                 <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-6 md:mb-8 leading-tight tracking-tight" data-track-id="hero-title" data-section="Hero Title">
-                  <span className="block text-gray-400 mb-1 md:mb-2 text-3xl sm:text-4xl md:text-5xl font-light">생각하게 만드는</span>
+                  <span className="block text-gray-400 mb-1 md:mb-2 text-3xl sm:text-4xl md:text-5xl font-light">말하면서 배우는</span>
                   <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-black">
-                    ThinkGPT
+                    생각톡
                   </span>
                 </h1>
                 
@@ -93,7 +93,7 @@ export const SolutionSection = () => {
                   </div>
                   
                   <p className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300 text-base md:text-lg font-semibold mt-16 text-center">
-                    서울대 전문가 팀이<br />10년간의 교육 노하우를 녹여냈습니다
+                    서울대 전문가 팀이<br />음성 대화 교육의 새로운 기준을 만들었습니다
                   </p>
                 </div>
                 

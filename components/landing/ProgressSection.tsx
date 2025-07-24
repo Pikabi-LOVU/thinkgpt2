@@ -14,6 +14,8 @@ import {
     Target,
     X,
     HelpCircle,
+    Mic,
+    Volume2,
   } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card"
 
@@ -38,7 +40,7 @@ export const ProgressSection = () => {
                   </div>
                 </div>
               </div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-2" data-track-id="thinkgpt-solution" data-section="ThinkGPT Solution">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-2" data-track-id="thinkgpt-solution" data-section="생각톡 Solution">
                 백문이 불여일견
               </h2>
               <p className="text-xl md:text-2xl text-gray-400">
@@ -56,7 +58,7 @@ export const ProgressSection = () => {
                     <div className="w-10 h-10 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-xl flex items-center justify-center shadow-lg shadow-blue-400/30">
                       <span className="text-white font-black text-lg">1</span>
                     </div>
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400" data-track-id="case-1-writing" data-section="Case 1 Writing">Case 1: 글쓰기</span>
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400" data-track-id="case-1-speaking" data-section="Case 1 Speaking">Case 1: 말하기 연습</span>
                   </h3>
                 </div>
               </div>
@@ -116,13 +118,13 @@ export const ProgressSection = () => {
                         </div>
                       </div>
                       
-                      {/* ThinkGPT Side */}
+                      {/* 생각톡 Side */}
                       <div className="bg-emerald-950/20 p-3">
                         <div className="text-center mb-3">
                           <div className="inline-flex items-center justify-center w-8 h-8 bg-emerald-900/50 rounded-full mb-1">
                             <Brain className="h-5 w-5 text-emerald-400" />
                           </div>
-                          <h4 className="text-emerald-400 text-xs font-bold">ThinkGPT</h4>
+                          <h4 className="text-emerald-400 text-xs font-bold">생각톡</h4>
                         </div>
                         
                         {/* Flow Diagram */}
@@ -194,19 +196,23 @@ export const ProgressSection = () => {
                           <div className="w-6 h-6 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center">
                             <Brain className="h-4 w-4 text-white" />
                           </div>
-                          <span className="text-white text-sm font-semibold">ThinkGPT</span>
+                          <span className="text-white text-sm font-semibold">생각톡</span>
                         </div>
-                        <span className="text-gray-500 text-xs">글쓰기 도우미</span>
+                        <span className="text-gray-500 text-xs">말하기 도우미</span>
                       </div>
                     </div>
                     
                     {/* Chat Messages */}
                     <div className="bg-gray-950 px-3 py-4 space-y-3">
-                      {/* Student Message - 먼저 시작 */}
+                      {/* Student Voice Message - 먼저 시작 */}
                       <div className="flex items-start gap-2 justify-end">
                         <div className="bg-blue-600 rounded-2xl rounded-tr-sm px-3 py-2 max-w-[80%]">
+                          <div className="flex items-center gap-2 mb-1">
+                            <Mic className="h-3 w-3 text-blue-200" />
+                            <span className="text-blue-200 text-[10px]">음성 메시지</span>
+                          </div>
                           <p className="text-white text-xs leading-relaxed">
-                            환경보호에 대한 글ㄹ써줘
+                            환경보호에 대해 발표해야 하는데 어떻게 설명하면 좋을까?
                           </p>
                         </div>
                         <div className="w-6 h-6 bg-gray-700 rounded-full flex items-center justify-center flex-shrink-0">
@@ -214,23 +220,31 @@ export const ProgressSection = () => {
                         </div>
                       </div>
                       
-                      {/* AI Message */}
+                      {/* AI Voice Message */}
                       <div className="flex items-start gap-2">
                         <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
                           <Brain className="h-3.5 w-3.5 text-white" />
                         </div>
                         <div className="bg-gray-800 rounded-2xl rounded-tl-sm px-3 py-2 max-w-[80%]">
+                          <div className="flex items-center gap-2 mb-1">
+                            <Volume2 className="h-3 w-3 text-gray-400" />
+                            <span className="text-gray-400 text-[10px]">AI 음성 답변</span>
+                          </div>
                           <p className="text-gray-100 text-xs leading-relaxed">
-                            물론이죠! 환경보호에 대한 글을 함께 써봐요. 먼저 환경보호가 왜 중요하다고 생각하나요? 본인의 생각을 들려주세요.
+                            좋은 주제예요! 환경보호 발표를 준비하는군요. 먼저 환경보호가 왜 중요한지 당신만의 이유를 말해보세요. 개인적인 경험이나 생각을 넣으면 더 설득력 있어요.
                           </p>
                         </div>
                       </div>
                       
-                      {/* Student Message */}
+                      {/* Student Voice Message */}
                       <div className="flex items-start gap-2 justify-end">
                         <div className="bg-blue-600 rounded-2xl rounded-tr-sm px-3 py-2 max-w-[80%]">
+                          <div className="flex items-center gap-2 mb-1">
+                            <Mic className="h-3 w-3 text-blue-200" />
+                            <span className="text-blue-200 text-[10px]">음성 메시지</span>
+                          </div>
                           <p className="text-white text-xs leading-relaxed">
-                            지구온난화로 북극곰 죽어가ㅜ
+                            음... 지구온난화 때문에 북극곰들이 살 곳을 잃어가고 있잖아요...
                           </p>
                         </div>
                         <div className="w-6 h-6 bg-gray-700 rounded-full flex items-center justify-center flex-shrink-0">
@@ -238,14 +252,18 @@ export const ProgressSection = () => {
                         </div>
                       </div>
                       
-                      {/* AI Message */}
+                      {/* AI Voice Message */}
                       <div className="flex items-start gap-2">
                         <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
                           <Brain className="h-3.5 w-3.5 text-white" />
                         </div>
                         <div className="bg-gray-800 rounded-2xl rounded-tl-sm px-3 py-2 max-w-[80%]">
+                          <div className="flex items-center gap-2 mb-1">
+                            <Volume2 className="h-3 w-3 text-gray-400" />
+                            <span className="text-gray-400 text-[10px]">AI 음성 답변</span>
+                          </div>
                           <p className="text-gray-100 text-xs leading-relaxed">
-                            좋은 관찰이에요! 북극곰 외에 또 어떤 영향이 있을까요? 사람들의 생활에는 어떤 변화가 있을지 생각해보세요.
+                            네, 감정이 느껴지네요! 발표할 때 그 감정을 살려서 말하면 좋아요. 그런데 청중들이 더 공감하려면 우리 일상과 연결해보는 게 어떨까요? 예를 들어, 기후변화가 우리 동네에는 어떤 영향을 미치고 있을까요?
                           </p>
                         </div>
                       </div>
@@ -348,13 +366,13 @@ export const ProgressSection = () => {
                         </div>
                       </div>
                       
-                      {/* ThinkGPT Side */}
+                      {/* 생각톡 Side */}
                       <div className="bg-emerald-950/20 p-3">
                         <div className="text-center mb-3">
                           <div className="inline-flex items-center justify-center w-8 h-8 bg-emerald-900/50 rounded-full mb-1">
                             <Brain className="h-5 w-5 text-emerald-400" />
                           </div>
-                          <h4 className="text-emerald-400 text-xs font-bold">ThinkGPT</h4>
+                          <h4 className="text-emerald-400 text-xs font-bold">생각톡</h4>
                         </div>
                         
                         {/* Flow Diagram */}
@@ -426,24 +444,28 @@ export const ProgressSection = () => {
                           <div className="w-6 h-6 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center">
                             <Brain className="h-4 w-4 text-white" />
                           </div>
-                          <span className="text-white text-sm font-semibold">ThinkGPT</span>
+                          <span className="text-white text-sm font-semibold">생각톡</span>
                         </div>
-                        <span className="text-gray-500 text-xs">수학 도우미</span>
+                        <span className="text-gray-500 text-xs">수학 설명 도우미</span>
                       </div>
                     </div>
                     
                     {/* Chat Messages */}
                     <div className="bg-gray-950 px-3 py-4 space-y-3">
-                      {/* Student Message with Image */}
+                      {/* Student Voice Message with Image */}
                       <div className="flex items-start gap-2 justify-end">
                         <div className="bg-blue-600 rounded-2xl rounded-tr-sm p-2 max-w-[80%]">
+                          <div className="flex items-center gap-2 mb-2">
+                            <Mic className="h-3 w-3 text-blue-200" />
+                            <span className="text-blue-200 text-[10px]">음성 메시지</span>
+                          </div>
                           <img 
                             src="/math_work.png" 
                             alt="학생의 수학 문제 풀이" 
                             className="rounded-lg w-full max-w-[80px]"
                           />
                           <p className="text-white text-xs mt-2 px-1">
-                            평가좀
+                            이거 풀었는데 맞는지 모르겠어... 설명 좀 해줘
                           </p>
                         </div>
                         <div className="w-6 h-6 bg-gray-700 rounded-full flex items-center justify-center flex-shrink-0">
@@ -451,14 +473,18 @@ export const ProgressSection = () => {
                         </div>
                       </div>
                       
-                      {/* AI Message */}
+                      {/* AI Voice Message */}
                       <div className="flex items-start gap-2">
                         <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
                           <Brain className="h-3.5 w-3.5 text-white" />
                         </div>
                         <div className="bg-gray-800 rounded-2xl rounded-tl-sm px-3 py-2 max-w-[85%]">
+                          <div className="flex items-center gap-2 mb-2">
+                            <Volume2 className="h-3 w-3 text-gray-400" />
+                            <span className="text-gray-400 text-[10px]">AI 음성 답변</span>
+                          </div>
                           <p className="text-gray-100 text-xs leading-relaxed mb-2">
-                            등비수열 문제를 풀었구나?
+                            오, 등비수열 문제네요! 너무 잘 풀었어요. 제가 하나하나 설명해드릴게요.
                           </p>
                           <div className="space-y-2">
                             <div className="bg-green-900/20 rounded-lg px-2 py-1.5 border border-green-700/30">
@@ -479,11 +505,15 @@ export const ProgressSection = () => {
                         </div>
                       </div>
                       
-                      {/* Student Message */}
+                      {/* Student Voice Message */}
                       <div className="flex items-start gap-2 justify-end">
                         <div className="bg-blue-600 rounded-2xl rounded-tr-sm px-3 py-2 max-w-[80%]">
+                          <div className="flex items-center gap-2 mb-1">
+                            <Mic className="h-3 w-3 text-blue-200" />
+                            <span className="text-blue-200 text-[10px]">음성 메시지</span>
+                          </div>
                           <p className="text-white text-xs leading-relaxed">
-                            엥 그러네 ㄱㅅ
+                            아 진짜다! 고마워
                           </p>
                         </div>
                         <div className="w-6 h-6 bg-gray-700 rounded-full flex items-center justify-center flex-shrink-0">
@@ -491,11 +521,15 @@ export const ProgressSection = () => {
                         </div>
                       </div>
                       
-                      {/* Student Follow-up Question */}
+                      {/* Student Follow-up Voice Question */}
                       <div className="flex items-start gap-2 justify-end">
                         <div className="bg-blue-600 rounded-2xl rounded-tr-sm px-3 py-2 max-w-[80%]">
+                          <div className="flex items-center gap-2 mb-1">
+                            <Mic className="h-3 w-3 text-blue-200" />
+                            <span className="text-blue-200 text-[10px]">음성 메시지</span>
+                          </div>
                           <p className="text-white text-xs leading-relaxed">
-                            아니근데 왜 0이면 안되는거야? 아무도 안알려주던데;;;
+                            근데 왜 공비가 0이면 안 되는 거야? 학교에서도 그냥 외우기만 하라고 하던데...
                           </p>
                         </div>
                         <div className="w-6 h-6 bg-gray-700 rounded-full flex items-center justify-center flex-shrink-0">
@@ -503,14 +537,18 @@ export const ProgressSection = () => {
                         </div>
                       </div>
                       
-                      {/* AI Detailed Explanation */}
+                      {/* AI Detailed Voice Explanation */}
                       <div className="flex items-start gap-2">
                         <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
                           <Brain className="h-3.5 w-3.5 text-white" />
                         </div>
                         <div className="bg-gray-800 rounded-2xl rounded-tl-sm px-3 py-2 max-w-[85%]">
+                          <div className="flex items-center gap-2 mb-2">
+                            <Volume2 className="h-3 w-3 text-gray-400" />
+                            <span className="text-gray-400 text-[10px]">AI 음성 답변</span>
+                          </div>
                           <p className="text-gray-100 text-xs leading-relaxed mb-2">
-                            좋은 질문이야! 이유를 차근차근 설명해줄게:
+                            아하, 그게 궁금했구나! 내가 천천히 설명해줄게. 들어봐:
                           </p>
                           <div className="bg-gray-900/50 rounded-lg px-2 py-1.5 mb-2">
                             <p className="text-gray-300 text-[10px] leading-relaxed font-mono">
@@ -527,14 +565,18 @@ export const ProgressSection = () => {
                         </div>
                       </div>
                       
-                      {/* AI Encouragement Message */}
+                      {/* AI Encouragement Voice Message */}
                       <div className="flex items-start gap-2">
                         <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
                           <Brain className="h-3.5 w-3.5 text-white" />
                         </div>
                         <div className="bg-gray-800 rounded-2xl rounded-tl-sm px-3 py-2 max-w-[80%]">
+                          <div className="flex items-center gap-2 mb-1">
+                            <Volume2 className="h-3 w-3 text-gray-400" />
+                            <span className="text-gray-400 text-[10px]">AI 음성 답변</span>
+                          </div>
                           <p className="text-gray-100 text-xs leading-relaxed">
-                            이제 이해했지? 그럼 r ≠ 0 조건 넣어서 다시 한번 풀어볼까? 🔥
+                            이해했지? 이렇게 설명 들으니까 훨씬 명확하지? 이제 r ≠ 0 조건 넣어서 다시 한번 풀어볼까? 🔥
                           </p>
                         </div>
                       </div>

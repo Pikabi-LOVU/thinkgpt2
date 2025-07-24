@@ -12,6 +12,7 @@ import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { ArrowLeft, CreditCard, Shield, CheckCircle, AlertCircle, MessageSquare } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import { trackEvent, identifyUser } from "@/lib/mixpanel"
 import { fbInitiateCheckout, fbPurchase, fbEvent } from "@/lib/facebook-pixel"
 
@@ -171,7 +172,7 @@ function PaymentContent() {
   const planInfo = useMemo(() => {
     if (selectedPlan === "yearly") {
       return {
-        title: "ThinkGPT 프리미엄 (연간)",
+        title: "생각톡 프리미엄 (연간)",
         price: 290000,
         period: "년",
         description: "연간 결제로 2개월 무료",
@@ -179,7 +180,7 @@ function PaymentContent() {
       }
     } else {
       return {
-        title: "ThinkGPT 프리미엄 (월간)",
+        title: "생각톡 프리미엄 (월간)",
         price: 29000,
         period: "월",
         description: "매월 자동 결제",
@@ -405,8 +406,14 @@ function PaymentContent() {
               돌아가기
             </Link>
             <div className="flex items-center space-x-2">
-              <CreditCard className="h-6 w-6 text-blue-600" />
-              <span className="text-lg font-semibold">ThinkGPT 결제</span>
+              <Image 
+                src="/think-talk_logo.png" 
+                alt="생각톡" 
+                width={120} 
+                height={40} 
+                className="h-10 w-auto"
+              />
+              <span className="text-lg font-semibold ml-2">결제</span>
             </div>
           </div>
         </div>

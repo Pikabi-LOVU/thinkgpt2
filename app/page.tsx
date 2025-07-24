@@ -24,12 +24,16 @@ import {
   HelpCircle,
 } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import { trackEvent } from "@/lib/mixpanel"
 import { ScrollTracker } from "@/components/ScrollTracker"
 import { fbViewContent } from "@/lib/facebook-pixel"
 import { CTAButton } from "@/components/CTAButton"
 import { ReviewSection } from "@/components/landing/ReviewSection"
 import { SolutionSection } from "@/components/landing/SolutionSection"
+import { IBSection } from "@/components/landing/IBSection"
+import { ConversationSection } from "@/components/landing/ConversationSection"
+import { FeaturesSection } from "@/components/landing/FeaturesSection"
 import { ProblemSection } from "@/components/landing/ProblemSection"
 import { Solution2Section } from "@/components/landing/Solution2Section"
 import { ProgressSection } from "@/components/landing/ProgressSection"
@@ -49,7 +53,7 @@ function LandingPageContent() {
     // Facebook Pixel - ViewContent 이벤트 (랜딩 페이지 뷰)
     if (typeof window !== 'undefined' && window.fbq) {
       window.fbq('track', 'ViewContent', {
-        content_name: 'ThinkGPT',
+        content_name: '생각톡',
         content_category: 'Education',
         content_type: 'product_group',
         variant: variant || 'direct_traffic',
@@ -98,17 +102,19 @@ function LandingPageContent() {
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
         <div className="max-w-md w-full bg-white rounded-2xl shadow-xl p-8 text-center">
-          <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-            <Brain className="h-8 w-8 text-white" />
-          </div>
-          
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">ThinkGPT</h1>
+          <Image 
+            src="/think-talk_logo.png" 
+            alt="생각톡" 
+            width={150} 
+            height={50} 
+            className="h-12 w-auto mx-auto mb-6"
+          />
           <p className="text-gray-600 mb-8">상담 감사합니다! 어떻게 진행하시겠어요?</p>
           
           <div className="space-y-4">
             <Link href="/?f=trial&aftercall=browse" className="block">
               <button className="w-full bg-gradient-to-r from-gray-500 to-gray-600 hover:from-gray-600 hover:to-gray-700 text-white font-semibold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                ThinkGPT 다시 둘러보기
+                생각톡 다시 둘러보기
               </button>
             </Link>
             
@@ -159,11 +165,15 @@ function LandingPageContent() {
         <header className="fixed top-0 left-0 right-0 w-full bg-gray-950 z-[9999] border-b border-gray-800">
           <div className="container mx-auto px-4 py-3">
             <nav className="flex items-center">
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center shadow-lg">
-                  <Brain className="h-5 w-5 text-white" />
-                </div>
-                <span className="text-xl font-semibold text-white">ThinkGPT</span>
+              <div className="flex items-center">
+                <Image 
+                  src="/think-talk_logo.png" 
+                  alt="생각톡" 
+                  width={120} 
+                  height={40} 
+                  className="h-10 w-auto"
+                  priority
+                />
               </div>
             </nav>
           </div>
@@ -585,6 +595,15 @@ function LandingPageContent() {
           )}
 
           {/* Fixed CTA Button 제거 - 상단의 고정 버튼 사용 */}
+
+          {/* 4 Core Features Section */}
+          <FeaturesSection />
+
+          {/* IB Education Section */}
+          <IBSection />
+
+          {/* Conversation Example Section */}
+          <ConversationSection />
 
           {/* Part 2: Solution Section - Contrasting Theme */}
           <SolutionSection />
